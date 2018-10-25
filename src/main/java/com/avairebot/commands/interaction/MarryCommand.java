@@ -49,7 +49,6 @@ public class MarryCommand extends InteractionCommand {
             "https://i.imgur.com/JBdzTFS.gif",
             "https://i.imgur.com/kXKaIlV.gif",
             "https://i.imgur.com/bIZDJoG.gif",
-            "https://i.imgur.com/Uq4gCOM.gif",
             "https://i.imgur.com/hULfQUb.gif",
             "https://i.imgur.com/EP3Wc5N.gif",
             "https://i.imgur.com/P8d7tM6.gif"
