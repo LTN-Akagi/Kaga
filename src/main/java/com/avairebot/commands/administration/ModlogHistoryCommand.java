@@ -29,7 +29,10 @@ import com.avairebot.contracts.commands.Command;
 import com.avairebot.contracts.commands.CommandGroup;
 import com.avairebot.contracts.commands.CommandGroups;
 import com.avairebot.database.collection.Collection;
+import com.avairebot.database.collection.DataRow;
+import com.avairebot.language.I18n;
 import com.avairebot.modlog.ModlogType;
+import com.avairebot.time.Carbon;
 import com.avairebot.utilities.MentionableUtil;
 import com.avairebot.utilities.NumberUtil;
 import net.dv8tion.jda.core.entities.User;
@@ -127,9 +130,22 @@ public class ModlogHistoryCommand extends Command {
                 ModlogType type = ModlogType.fromId(row.getInt("type", 0));
                 String reason = row.getString("reason", context.i18n("noReasonGiven"));
 
-                records.add(context.i18n("entry",
+                Carbon time = row.getTimestamp("created_at");
+
+                String modlogCaseId = context.getGuildTransformer() == null
+                    ? row.getString("modlogCase")
+                    : I18n.format("[{0}](https://discordapp.com/channels/{1}/{2}/{3})",
                     row.getString("modlogCase"),
-                    type == null ? "Unknown" : type.getName(),
+                    context.getGuild().getIdLong(),
+                    context.getGuildTransformer().getModlog(),
+                    row.getString("message_id")
+                );
+
+                records.add(context.i18n("entry",
+                    modlogCaseId,
+                    type == null ? "Unknown" : type.getEmote() + " " + type.getName(),
+                    formatUser(avaire.getShardManager().getUserById(row.getLong("user_id")), row),
+                    time == null ? "Unknown" : time.format("EEE, MMM dd, yyyy h:mm aaa z"),
                     reason
                 ));
             });
@@ -157,5 +173,12 @@ public class ModlogHistoryCommand extends Command {
         }
 
         return true;
+    }
+
+    private String formatUser(User user, DataRow row) {
+        if (user == null) {
+            return "ID:" + row.getString("user_id");
+        }
+        return user.getName() + "#" + user.getDiscriminator();
     }
 }
