@@ -62,7 +62,7 @@ discord:
   # create one, once you have it, replace the text between the
   # quotes with your client id.
   #
-  clientId: 'YouBotClientIdShouldGoHere'
+  clientId: 'YourBotClientIdShouldGoHere'
 
   # This is your Discord application token, if you don't have a Discord
   # application, check the link above and follow the short guide to
@@ -481,7 +481,7 @@ apiKeys:
   meowApi: ''
 
   # Open Weather Map is a free service that provides lots of ways to get weather
-  # and wind data based on a location, Ava uses it for the weather commad, if
+  # and wind data based on a location, Ava uses it for the weather command, if
   # no valid API key is given, the command will disable itself.
   #
   # You can get a free API key that allows 60 requests per-minute by singing up on
