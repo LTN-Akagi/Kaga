@@ -5,7 +5,8 @@
 ## About AvaIre
 
 AvaIre is a multipurpose Discord bot made for fun, written in Java 8, using the [JDA](https://github.com/DV8FromTheWorld/JDA) library.
-Kaga is Forked off of Avaire and if there's any problems then message LTN_Akagi as it might have been something I changed
+
+ - Kaga is Forked off of Avaire and if there's any problems then message LTN_Akagi as it might have been something I changed
 
 ## Main features
 
