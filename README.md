@@ -6,6 +6,13 @@
 
 AvaIre is a multipurpose Discord bot made for fun, written in Java 8, using the [JDA](https://github.com/DV8FromTheWorld/JDA) library.
 
+ - Kaga is Forked off of Avaire and if there's any problems then message LTN_Akagi as it might have been something I changed
+## Invite Links
+
+[Kaga Invite Link](https://discordapp.com/oauth2/authorize?&client_id=468245332787200021&scope=bot&permissions=66186303) Forked
+
+[Avaire Invite Link](https://avairebot.com/invite) Master
+
 ## Main features
 
 - Music streaming from YouTube, SoundCloud, Twitch etc.
@@ -27,7 +34,7 @@ You can deploy in a simple way to Heroku using the button below.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-Before deploying, read [the configuration guide](https://avairebot.com/docs/master/configuration/), aswell as [the guide](https://avairebot.com/docs/master/heroku) regarding hosting with Heroku.
+Before deploying, read [the configuration guide](https://avairebot.com/docs/master/configuration/), aswell as [the guide](https://avairebot.com/docs/master/heroku-guide) regarding hosting with Heroku.
 
 ## Contributing
 
@@ -58,6 +65,7 @@ AvaIre relies on the following projects:
 | [Reflections](https://github.com/ronmamo/reflections) | [Do What The F\*ck You Want To Public License](https://github.com/ronmamo/reflections/blob/master/COPYING.txt) |
 
 ---
+ - Only Go here If you want to use Avaire and NOT Kaga
 
 <p align="center">
   <a href="https://discord.gg/gt2FWER"><img src="https://discordapp.com/api/guilds/284083636368834561/widget.png?style=banner2" alt="Discord server"></a>

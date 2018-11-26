@@ -8,7 +8,7 @@ errors:
     mustBeConnectedToSameChannel: 'You must be connected to the same voice channel I am in to {0}!'
     missingMusicQueue: 'Missing music `query`, you must include a link to the song you want to listen to, or at least give me a song title!'
     requireLevelFeatureToBeEnabled: 'This command requires the `Levels & Experience` feature to be enabled for the server, you can ask a server admin if they want to enable it with `{0}`'
-    errorOccurredWhileLoading: 'An error occurred while loading the {0}, please try again, if the problem continues please report this to one of my developers on the [AvaIre support server](https://discord.gg/gt2FWER).'
+    errorOccurredWhileLoading: 'An error occurred while loading the {0}, please try again, if the problem continues please report this to one of my developers by doing !feedback.'
 
 levelupMessages:
     - "GG :user, you just reached **Level :level**"
@@ -513,9 +513,12 @@ music:
         error: 'Missing argument `song id`, you must include the ID of the song you want to remove from the queue.'
         failedToRemoveSong: 'Something went wrong, failed to remove song at index `:index`'
         tooHighNumberGiven: 'There are only `{0}` songs in the queue, try lowering your number a bit.'
+        invalidRange: 'Invalid range given, give the range of IDs in a start to end format, like `3-6`.'
         mustBePositiveNumber: 'The `song id` must be a valid positive number.'
         nothingToRemove: 'Nothing to remove, request music first with `{0}play`'
         success: ':song has been successfully removed from the music queue.'
+        successMultiple: 'Songs from `:start` to `:end` were successfully removed from the music queue.\n:tracks'
+        successMultipleNote: "\nAnd **{0}** more songs were removed from the queue."
 
     RepeatMusicQueueCommand:
         error: 'There is nothing to repeat, request music first with `{0}play`'
@@ -717,8 +720,8 @@ utility:
         totalShards: 'Total Shards'
 
     SourceCommand:
-        noArgs: 'AvaIre source code:'
-        command: 'AvaIre source code for the **:command** command:'
+        noArgs: 'Kaga source code:'
+        command: 'Kaga source code for the **:command** command:'
         invalidCommand: 'Invalid command given, here is the full source code instead.'
         externalCommand: "The command is registered via an external plugin, the author of the plugin haven't made the source of the command public, or they forgot to add a link to it, here is the full source code for the bot instead."
 
@@ -767,9 +770,9 @@ utility:
 
     VersionCommand:
         current: 'I am currently `:difference` :type versions behind!'
-        getLatest: 'You can get the latest version of me on github at [avaire/avaire](https://github.com/LTN-Akagi/Kaga)'
-        usingLatest: "You're using the latest version of AvaIre!"
-        latestVersion: 'The latest version of AvaIre is v{0}'
+        getLatest: 'You can get the latest version of me on github at [LTN-Akagi/Kaga](https://github.com/LTN-Akagi/Kaga)'
+        usingLatest: "You're using the latest version of Kaga!"
+        latestVersion: 'The latest version of Kaga is v{0}'
         versions:
             majorName: 'Major'
             major: 'Major version updates are total reworks of the bot and how it works or a large compilation of minor changes to the source code, it is highly recommended that you update on major version changes since older versions will not be supported for bug fixes or updates.'
