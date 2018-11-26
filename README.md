@@ -9,8 +9,9 @@ AvaIre is a multipurpose Discord bot made for fun, written in Java 8, using the 
  - Kaga is Forked off of Avaire and if there's any problems then message LTN_Akagi as it might have been something I changed
 ## Invite Links
 
-    [Kaga Invite Link](https://discordapp.com/oauth2/authorize?&client_id=468245332787200021&scope=bot&permissions=66186303)
-    [Avaire Invite Link](https://avairebot.com/invite)
+[Kaga Invite Link](https://discordapp.com/oauth2/authorize?&client_id=468245332787200021&scope=bot&permissions=66186303)
+
+[Avaire Invite Link](https://avairebot.com/invite)
 
 ## Main features
 
