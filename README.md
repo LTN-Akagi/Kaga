@@ -2,11 +2,20 @@
     <img src="https://avairebot.com/assets/img/banner-simple.png">
 </p>
 
+## Known Bugs
+
+- Leadboarder and Gleaderboard commands report back an error. (SQL Problem)
+    Rank command still works though
+- Music could be a little laggy until Lavalink gets setup on a remote server.
+    If you do plan on using the music commands then expect some lag as she's not on a good connection.
+
 ## About AvaIre
+
+ - If you see Avaire being mentioned instead of Kaga. then it's not a bug I havn't got around to changing the Text files.
+    but they all should point to this github (well some of them)
 
 AvaIre is a multipurpose Discord bot made for fun, written in Java 8, using the [JDA](https://github.com/DV8FromTheWorld/JDA) library.
 
- - Kaga is Forked off of Avaire and if there's any problems then message LTN_Akagi as it might have been something I changed
 ## Invite Links
 
 [Kaga Invite Link](https://discordapp.com/oauth2/authorize?&client_id=468245332787200021&scope=bot&permissions=66186303) Forked
@@ -65,7 +74,7 @@ AvaIre relies on the following projects:
 | [Reflections](https://github.com/ronmamo/reflections) | [Do What The F\*ck You Want To Public License](https://github.com/ronmamo/reflections/blob/master/COPYING.txt) |
 
 ---
- - Only Go here If you want to use Avaire and NOT Kaga
+ - This is for Avaire and not Kaga! But it is still a great place to be and hang out
 
 <p align="center">
   <a href="https://discord.gg/gt2FWER"><img src="https://discordapp.com/api/guilds/284083636368834561/widget.png?style=banner2" alt="Discord server"></a>
