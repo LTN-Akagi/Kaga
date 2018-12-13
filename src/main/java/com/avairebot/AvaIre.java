@@ -37,6 +37,7 @@ import com.avairebot.chat.ConsoleColor;
 import com.avairebot.commands.CategoryHandler;
 import com.avairebot.commands.CommandHandler;
 import com.avairebot.commands.administration.ChangePrefixCommand;
+import com.avairebot.commands.utility.UptimeCommand;
 import com.avairebot.config.Configuration;
 import com.avairebot.config.EnvironmentMacros;
 import com.avairebot.config.EnvironmentOverride;
@@ -219,7 +220,8 @@ public class AvaIre {
             new AddHierarchyToGuildsTableMigration(),
             new AddLevelModifierToGuildsTableMigration(),
             new AddPardonToLogTableMigration(),
-            new CreateReactionRoleTableMigration()
+            new CreateReactionRoleTableMigration(),
+            new AddLevelExemptChannelsToGuildsTableMigration()
         );
 
         log.info("Registering default middlewares");
@@ -256,6 +258,7 @@ public class AvaIre {
 
         log.info("Registering commands...");
         if (settings.isMusicOnlyMode()) {
+            CommandHandler.register(new UptimeCommand(this));
             CommandHandler.register(new ChangePrefixCommand(this));
             autoloadPackage(Constants.PACKAGE_COMMAND_PATH + ".help", command -> CommandHandler.register((Command) command));
             autoloadPackage(Constants.PACKAGE_COMMAND_PATH + ".music", command -> CommandHandler.register((Command) command));
