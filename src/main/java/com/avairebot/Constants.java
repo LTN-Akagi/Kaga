@@ -48,9 +48,9 @@ public class Constants {
     public static final String PACKAGE_JOB_PATH = "com.avairebot.scheduler";
 
     // Emojis
-    public static final String EMOTE_ONLINE = "<:online:519340268839895061>";
-    public static final String EMOTE_AWAY = "<:away:519335317262696449>";
-    public static final String EMOTE_DND = "<:dnd:519335317262696449>";
+    public static final String EMOTE_ONLINE = "<:Online:519338699788648458>";
+    public static final String EMOTE_AWAY = "<:Away:519338739751976970>";
+    public static final String EMOTE_DND = "<:DND:519338793166307344>";
 
     // Command source link
     public static final String SOURCE_URI = "https://github.com/LTN-Akagi/Kaga/tree/master/src/main/java/com/avairebot/commands/%s/%s.java";
