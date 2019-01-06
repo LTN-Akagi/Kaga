@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018.
+ * Copyright (c) 2019.
  *
  * This file is part of AvaIre.
  *
@@ -19,23 +19,20 @@
  *
  */
 
-package com.avairebot.contracts.database.grammar;
+package com.avairebot.contracts.database;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.SQLException;
 
-public abstract class InsertGrammar extends TableGrammar {
-
-    /**
-     * List of key that should be added to the query.
-     */
-    protected final List<String> keyset = new ArrayList<>();
+@FunctionalInterface
+public interface SupplierWithSQL<R> {
 
     /**
-     * Creates the insert query grammar by preparing
-     * the {@link #query} parameter.
+     * Returns the result of the supplier with the given result type, or throws
+     * a {@link SQLException SQL exception} if something went wrong.
+     *
+     * @return The result of the supplier.
+     * @throws SQLException If an SQL exception is thrown within the
+     *                      supplier, it will be passed down the stack.
      */
-    public InsertGrammar() {
-        query = "INSERT INTO ";
-    }
+    R get() throws SQLException;
 }
