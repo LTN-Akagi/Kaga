@@ -21,11 +21,12 @@
 
 package com.avairebot.contracts.database.migrations;
 
+import com.avairebot.contracts.reflection.Reflectional;
 import com.avairebot.database.schema.Schema;
 
 import java.sql.SQLException;
 
-public interface Migration {
+public interface Migration extends Reflectional {
 
     /**
      * Gets the time the migration was created at, this is used to order
@@ -37,7 +38,7 @@ public interface Migration {
      * @return the carbon time string
      * @see com.avairebot.time.Carbon
      */
-    public String created_at();
+    String created_at();
 
     /**
      * Attempts to migrate the database, this is automatically executed from the
@@ -51,7 +52,7 @@ public interface Migration {
      *                      <code>ResultSet</code> object, the method is called on a
      *                      <code>PreparedStatement</code> or <code>CallableStatement</code>
      */
-    public boolean up(Schema schema) throws SQLException;
+    boolean up(Schema schema) throws SQLException;
 
     /**
      * Attempts to rollback the mgirations from the database, this is automatically executed from the
@@ -66,7 +67,7 @@ public interface Migration {
      *                      <code>ResultSet</code> object, the method is called on a
      *                      <code>PreparedStatement</code> or <code>CallableStatement</code>
      */
-    default public boolean down(Schema schema) throws SQLException {
+    default boolean down(Schema schema) throws SQLException {
         return false;
     }
 }

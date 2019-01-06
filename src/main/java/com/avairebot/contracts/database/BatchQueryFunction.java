@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018.
+ * Copyright (c) 2019.
  *
  * This file is part of AvaIre.
  *
@@ -19,23 +19,21 @@
  *
  */
 
-package com.avairebot.contracts.database.grammar;
+package com.avairebot.contracts.database;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.avairebot.database.DatabaseManager;
 
-public abstract class InsertGrammar extends TableGrammar {
+import java.sql.SQLException;
 
-    /**
-     * List of key that should be added to the query.
-     */
-    protected final List<String> keyset = new ArrayList<>();
+@FunctionalInterface
+public interface BatchQueryFunction<PreparedStatement> {
 
     /**
-     * Creates the insert query grammar by preparing
-     * the {@link #query} parameter.
+     * Runs the batch query function with the prepared statement generated through the query given to
+     * the {@link DatabaseManager#queryBatch(String, BatchQueryFunction) database queryBatch method}.
+     *
+     * @param statement The prepared statement that should be used for the batch request.
+     * @throws SQLException If an error occured
      */
-    public InsertGrammar() {
-        query = "INSERT INTO ";
-    }
+    void run(PreparedStatement statement) throws SQLException;
 }

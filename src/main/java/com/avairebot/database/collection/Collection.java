@@ -26,6 +26,8 @@ import com.avairebot.contracts.database.collection.CollectionEach;
 import com.avairebot.utilities.RandomUtil;
 import com.google.gson.Gson;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.math.BigDecimal;
 import java.security.SecureRandom;
 import java.sql.ResultSet;
@@ -33,6 +35,7 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.*;
 
+@SuppressWarnings({"WeakerAccess", "unused"})
 public class Collection implements Cloneable, Iterable<DataRow> {
 
     private final HashMap<String, String> keys;
@@ -52,7 +55,7 @@ public class Collection implements Cloneable, Iterable<DataRow> {
      *
      * @param instance The collection to copy
      */
-    public Collection(Collection instance) {
+    public Collection(@Nonnull Collection instance) {
         this.keys = new HashMap<>();
         this.items = new ArrayList<>();
 
@@ -66,7 +69,7 @@ public class Collection implements Cloneable, Iterable<DataRow> {
      *
      * @param items the map of items to create the collection from
      */
-    public Collection(List<Map<String, Object>> items) {
+    public Collection(@Nonnull List<Map<String, Object>> items) {
         this.keys = new HashMap<>();
         this.items = new ArrayList<>();
 
@@ -89,12 +92,15 @@ public class Collection implements Cloneable, Iterable<DataRow> {
      *                      form the database <code>ResultSet</code> object, or if the object
      *                      didn't return a valid response.
      */
-    public Collection(ResultSet result) throws SQLException {
-        ResultSetMetaData meta = result.getMetaData();
-
+    public Collection(@Nullable ResultSet result) throws SQLException {
         this.keys = new HashMap<>();
         this.items = new ArrayList<>();
 
+        if (result == null) {
+            return;
+        }
+
+        ResultSetMetaData meta = result.getMetaData();
         for (int i = 1; i <= meta.getColumnCount(); i++) {
             keys.put(meta.getColumnLabel(i), meta.getColumnClassName(i));
         }
@@ -607,7 +613,7 @@ public class Collection implements Cloneable, Iterable<DataRow> {
      * @return the collection instance.
      */
     public Collection sort(Comparator<DataRow> comparator) {
-        Collections.sort(items, comparator);
+        items.sort(comparator);
 
         return this;
     }
@@ -624,7 +630,7 @@ public class Collection implements Cloneable, Iterable<DataRow> {
             return this;
         }
 
-        return sort((DataRow first, DataRow second) -> first.get(field).hashCode() - second.get(field).hashCode());
+        return sort(Comparator.comparingInt(row -> row.get(field).hashCode()));
     }
 
     /**
@@ -758,6 +764,7 @@ public class Collection implements Cloneable, Iterable<DataRow> {
         return AvaIre.gson.toJson(items);
     }
 
+    @Nonnull
     @Override
     public Iterator<DataRow> iterator() {
         return new CollectionIterator();
