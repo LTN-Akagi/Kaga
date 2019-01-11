@@ -4,8 +4,6 @@
 
 ## Known Bugs
 
-- Leaderboard and Gleaderboard commands report back an error. (SQL Problem?)
-   - Rank command still works though
 - Music could be a little laggy until Lavalink gets setup on a remote server.
    - If you do plan on using the music commands then expect some lag as she's not on a good connection.
 
