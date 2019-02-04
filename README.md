@@ -2,6 +2,8 @@
     <img src="https://avairebot.com/assets/img/banner-simple.png">
 </p>
 
+https://travis-ci.org/LTN-Akagi/Kaga.svg?branch=master
+
 ## Known Bugs
 
 - Music could be a little laggy until Lavalink gets setup on a remote server.
