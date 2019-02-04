@@ -2,7 +2,7 @@
     <img src="https://avairebot.com/assets/img/banner-simple.png">
 </p>
 
-https://travis-ci.org/LTN-Akagi/Kaga.svg?branch=master
+[![Build Status](https://travis-ci.org/LTN-Akagi/Kaga.svg?branch=master)](https://travis-ci.org/LTN-Akagi/Kaga)
 
 ## Known Bugs
 
