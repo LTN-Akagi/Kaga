@@ -12,11 +12,11 @@ errors:
     errorOccurredWhileLoading: 'An error occurred while loading the {0}, please try again. If the problem continues, please report this to one of my developers on the [AvaIre support server](https://discord.gg/gt2FWER).'
 
 levelupMessages:
-    - "GG :user, you just reached **Level :level**"
-    - "Eyy :user, you just leveled up! You're now **Level :level**"
-    - "🌟 You just reached **Level :level** :user! Congrats 🌟"
-    - "You're on 🔥 :user, you've just reached **Level :level**"
-    - "Congratulations :user 🎉 You just leveled up! You're now **Level :level**"
+    - "So You Leveled up :user, Should I be happy that your at **Level :level**? Because I'm really not."
+    - ":user, You Just leveled up Now you are better then everyone Below. **Level :level**"
+    - "How dare you wake me up :user! Here Take this **Level :level** And don't bother me again."
+    - "GOOD JOB :user,YOU LEVELED UP! **Level :level** NOW Don't bother me again."
+    - "Congratulations I Give Zero Fucks on your level :user 🎉 But Since I'm Forced to. Here you go **Level :level**"
 
 levelupRoleMessages:
     - "GG :user, you just reached **Level :level**, you now have the **:role** role"
