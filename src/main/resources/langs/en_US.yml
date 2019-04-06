@@ -15,7 +15,7 @@ levelupMessages:
     - "So You Leveled up :user, Should I be happy that your at **Level :level**? Because I'm really not."
     - ":user, You Just leveled up Now you are better then everyone Below. **Level :level**"
     - "How dare you wake me up :user! Here Take this **Level :level** And don't bother me again."
-    - "GOOD JOB :user,YOU LEVELED UP! **Level :level** NOW Don't bother me again."
+    - "GOOD JOB :user,YOU LEVELED UP! **Level :level** NOW Don't bother me again :user."
     - "Congratulations I Give Zero Fucks on your level :user But Since I'm Forced to. Here you go **Level :level**"
 
 levelupRoleMessages:
