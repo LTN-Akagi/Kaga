@@ -15,8 +15,8 @@ levelupMessages:
     - "So You Leveled up :user, Should I be happy that your at **Level :level**? Because I'm really not."
     - ":user, You Just leveled up Now you are better then everyone Below. **Level :level**"
     - "How dare you wake me up :user! Here Take this **Level :level** And don't bother me again."
-    - "GOOD JOB :user,YOU LEVELED UP! **Level :level** NOW Don't bother me again."
-    - "Congratulations I Give Zero Fucks on your level :user 🎉 But Since I'm Forced to. Here you go **Level :level**"
+    - "GOOD JOB :user,YOU LEVELED UP! **Level :level** NOW Don't bother me again :user."
+    - "Congratulations I Give Zero Fucks on your level :user But Since I'm Forced to. Here you go **Level :level**"
 
 levelupRoleMessages:
     - "GG :user, you just reached **Level :level**, you now have the **:role** role"
@@ -184,7 +184,8 @@ administration:
     LevelModifierCommand:
         invalidNumberGiven: "Invalid modifier given, the modifier must be a positive percentage between `0.01%` and `500%`"
         resetToDefault: "The level modifier has been reset back to using the default **:modifier** modifier."
-        changedTo: "The level and experience modifier has been change to **:modifier**."
+        changedTo: "The level and experience modifier has been change to **:modifier**"
+        requiredIsNow: "\n\n**Required XP to reach some levels is now:**\n"
         statusMessage: "The server is currently using a **:modifier** modifier for levels and experience.\n\n**Required XP to reach some levels**\n"
         level: "Level {0}"
 

@@ -226,7 +226,7 @@ public class AdministrateExperienceCommand extends Command {
 
         context.makeSuccess(context.i18n("success.add"))
             .set("amount", NumberUtil.formatNicely(amount))
-            .set("newAmount", NumberUtil.formatNicely(player.getExperience()))
+            .set("newAmount", NumberUtil.formatNicely(player.getExperience() - 100))
             .set("target", user.getAsMention())
             .queue();
 
@@ -303,6 +303,7 @@ public class AdministrateExperienceCommand extends Command {
                 .where("guild_id", context.getGuild().getId())
                 .update(statement -> {
                     statement.set("experience", 100);
+                    statement.set("active", 0);
                 });
 
             PlayerController.forgetCacheForGuild(context.getGuild().getIdLong());
