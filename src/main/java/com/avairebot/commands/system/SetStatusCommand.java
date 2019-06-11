@@ -130,7 +130,7 @@ public class SetStatusCommand extends SystemCommand {
             String url = args[0];
             String streamStatus = args.length > 1
                 ? String.join(" ", Arrays.copyOfRange(args, 1, args.length))
-                : "on Twitch.tv!";
+                : "Not sure why my Master is Streaming";
 
             return Game.streaming(streamStatus, url);
         }
