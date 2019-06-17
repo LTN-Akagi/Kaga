@@ -15,7 +15,7 @@ levelupMessages:
     - "So You Leveled up :user, Should I be happy that your at **Level :level**? Because I'm really not."
     - ":user, You Just leveled up Now you are better then everyone Below. **Level :level**"
     - "How dare you wake me up :user! Here Take this **Level :level** And don't bother me again."
-    - "GOOD JOB :user,YOU LEVELED UP! **Level :level** NOW Don't bother me again :user."
+    - "GOOD JOB :user,YOU LEVELED UP! To **Level :level** NOW Don't bother me again."
     - "Congratulations I Give Zero Fucks on your level :user But Since I'm Forced to. Here you go **Level :level**"
 
 levelupRoleMessages:
@@ -603,7 +603,7 @@ music:
         currentVolume: 'The default volume for the server is currently set to `:volume%`'
         changedVolume: 'The default volume has been set to `:volume%`'
         failedToSave: 'Something went wrong while trying to save the default volume: {0}'
-        mustBeNumber: 'The `volume` must be a number between 10 and 100'
+        mustBeNumber: 'The `volume` must be a number between 1 and 100'
 
     ShuffleCommand:
         error: 'The queue is already empty, you can request something with\n`{0}play <song title | url>`'
