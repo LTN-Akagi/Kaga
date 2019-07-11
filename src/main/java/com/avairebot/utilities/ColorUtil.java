@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018.
+ * Copyright (c) 2019.
  *
  * This file is part of AvaIre.
  *
@@ -19,11 +19,13 @@
  *
  */
 
-package com.avairebot.contracts.imagegen;
+package com.avairebot.utilities;
 
+import javax.annotation.Nullable;
 import java.awt.*;
+import java.lang.reflect.Field;
 
-public interface BackgroundColors {
+public class ColorUtil {
 
     /**
      * Creates an sRGBA color with the specified red, green,
@@ -36,7 +38,7 @@ public interface BackgroundColors {
      * @param alpha The alpha component.
      * @return The color with the given values.
      */
-    default Color makeColor(float red, float green, float blue, float alpha) {
+    public static Color makeColor(float red, float green, float blue, float alpha) {
         return new Color(red / 255F, green / 255F, blue / 255F, alpha / 100F);
     }
 
@@ -49,7 +51,35 @@ public interface BackgroundColors {
      * @param blue  The blue component
      * @return The color with the given values.
      */
-    default Color makeColor(float red, float green, float blue) {
+    public static Color makeColor(float red, float green, float blue) {
         return new Color(red / 255F, green / 255F, blue / 255F, 1F);
+    }
+
+    /**
+     * Converts a given string into a color.
+     *
+     * @param value The string, either a name or a hex-string.
+     * @return the color or null if an error occurs.
+     */
+    @Nullable
+    public static Color getColorFromString(String value) {
+        if (value == null) {
+            return null;
+        }
+
+        try {
+            // get color by hex or octal value
+            return Color.decode(value);
+        } catch (NumberFormatException nfe) {
+            try {
+                // if we can't decode lets try to get it by name
+                // try to get a color by name using reflection
+                final Field f = Color.class.getField(value);
+
+                return (Color) f.get(null);
+            } catch (Exception ex) {
+                return null;
+            }
+        }
     }
 }
