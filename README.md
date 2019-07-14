@@ -2,6 +2,25 @@
     <img src="https://cdn.avairebot.com/image/simple-banner.png">
 </p>
 
+## Avaire's Stats NOT KAGA'S
+<p align="center">
+    <a href="https://discordbots.org/bot/275270122082533378">
+        <img src="https://discordbots.org/api/widget/servers/275270122082533378.svg?noavatar=true" alt="AvaIre">
+    </a>
+    <a href="https://discordbots.org/bot/275270122082533378">
+        <img src="https://discordbots.org/api/widget/upvotes/275270122082533378.svg?noavatar=true" alt="AvaIre">
+    </a>
+    <a href="https://avairebot.com/">
+        <img src="https://cdn.avairebot.com/badge/avaire-version.svg" alt="AvaIre Version">
+    </a>
+    <a href="https://avairebot.com/support">
+        <img src="https://img.shields.io/discord/284083636368834561.svg" alt="Discord">
+    </a>
+    <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+        <img src="https://img.shields.io/github/license/avaire/avaire.svg" alt="GitHub" >
+    </a>
+</p>
+
 [![Build Status](https://travis-ci.org/LTN-Akagi/Kaga.svg?branch=master)](https://travis-ci.org/LTN-Akagi/Kaga)
 
 ## Known Bugs
@@ -9,18 +28,9 @@
 - Music could be a little laggy until Lavalink gets setup on a remote server.
    - If you do plan on using the music commands then expect some lag as she's not on a good connection.
 
-## About AvaIre
+## About Kaga
 
- - If you see Avaire being mentioned instead of Kaga. then it's not a bug I havn't got around to changing the Text files.
-   - but they all should point to this github (well some of them)
-
-AvaIre is a multipurpose Discord bot made for fun, written in Java 8, using the [JDA](https://github.com/DV8FromTheWorld/JDA) library.
-
-## Invite Links
-
-[Kaga Invite Link](https://discordapp.com/oauth2/authorize?&client_id=468245332787200021&scope=bot&permissions=66186303) Forked
-
-[Avaire Invite Link](https://avairebot.com/invite) Master
+Kaga is a multipurpose Discord bot made for fun, written in Java 8, using the [JDA](https://github.com/DV8FromTheWorld/JDA) library.
 
 ## Main features
 
@@ -38,7 +48,7 @@ AvaIre is a multipurpose Discord bot made for fun, written in Java 8, using the 
 
 Visit our [website](https://avairebot.com/) for more information.
 
-## Deploy AvaIre on Heroku
+## Deploy Kaga on Heroku 
 You can deploy in a simple way to Heroku using the button below.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
@@ -74,7 +84,6 @@ AvaIre relies on the following projects:
 | [Reflections](https://github.com/ronmamo/reflections) | [Do What The F\*ck You Want To Public License](https://github.com/ronmamo/reflections/blob/master/COPYING.txt) |
 
 ---
- - This is for Avaire and not Kaga! But it is still a great place to be and hang out
 
 <p align="center">
   <a href="https://avairebot.com/support"><img src="https://discordapp.com/api/guilds/284083636368834561/widget.png?style=banner2" alt="Discord server"></a>
