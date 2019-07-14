@@ -9,7 +9,7 @@ errors:
     missingMusicQueue: 'Missing music `query`, you must include a link to the song that you want to listen to, or at least give me a song title!'
     cantMentionEveryone: "You don't have permissions to mention everyone."
     requireLevelFeatureToBeEnabled: 'This command requires the `Levels & Experience` feature to be enabled for the server, you can ask a server admin if they want to enable it with `{0}`'
-    errorOccurredWhileLoading: 'An error occurred while loading the {0}, please try again. If the problem continues, please report this to one of my developers on the [AvaIre support server](https://discord.gg/gt2FWER).'
+    errorOccurredWhileLoading: 'An error occurred while loading the {0}, please try again. If the problem continues, please report this to one of my developers on the [AvaIre support server](https://avairebot.com/support).'
 
 levelupMessages:
     - "So You Leveled up :user, Should I be happy that your at **Level :level**? Because I'm really not."
@@ -17,6 +17,7 @@ levelupMessages:
     - "How dare you wake me up :user! Here Take this **Level :level** And don't bother me again."
     - "GOOD JOB :user,YOU LEVELED UP! To **Level :level** NOW Don't bother me again."
     - "Congratulations I Give Zero Fucks on your level :user But Since I'm Forced to. Here you go **Level :level**"
+    - "Oh Great your at level :level. Guess I'll update my database due to you :user"
 
 levelupRoleMessages:
     - "GG :user, you just reached **Level :level**, you now have the **:role** role"
@@ -55,7 +56,7 @@ administration:
         cantUseForBots: "You can't add, remove, or reset XP for bot accounts since they don't earn any, please select a normal user when using this command."
         invalidAmountGiven: "The `amount` property must be between 1 and {0} to add or take XP from a user."
         aboutToResetEverything: "You're about to reset the XP for everyone on the entire server, note that this action **CAN NOT** be reversed. If you're sure you wanna continue, run the command to completely reset the servers XP.\n\n```:command server-reset :token```\nThis command will only work for 60 seconds, after that time the token becomes invalid and the command has to be ran again to get a new token."
-        failedToSaveChanges: "Failed to save the changes to the database, please try again, if the error continues to happen, please contact support on the official [AvaIre support server](https://discord.gg/gt2FWER)."
+        failedToSaveChanges: "Failed to save the changes to the database, please try again, if the error continues to happen, please contact support on the official [AvaIre support server](https://avairebot.com/support)."
         mustBeAnAdmin: "You must be a server admin to reset everyones XP."
         invalidSecurityToken: "Invalid security token given, please provide the correct security token to reset all the servers XP."
         warning: "Warning!"
@@ -279,6 +280,13 @@ administration:
     RemoveSelfAssignableRoleCommand:
         message: "The **:role** role has been removed from the self-assignable list.\nThe server has `:slots` more self-assignable roles slots available."
 
+    SetRoleColorCommand:
+        noRoleFound: "No role with the name \"{0}\" was found."
+        invalidColor: "The color \"{0}\" is not recognized, use the following HEX format instead \"#XXXXXX\""
+        userMissingPermissions: "You can't use the this command for the {0} role, you must have greater or equal privileges as the role to successfully run the command."
+        botMissingPermissions: "The Set Role Color command can't be used for the {0} role, I need to have greater or equal privileges as the role to successfully run the command."
+        colorChangeComplete: "The :role role has been successfully changed to **:color**."
+
     SlowmodeCommand:
         missingArgument: "Missing argument, you must either pass in the `seconds` value to enable slowmode for this or the mentioned channel, or `off` to disable it."
         mustBeValidNumbers: "Invalid slowmode value given, you must provide a number between **1** and **120**."
@@ -388,6 +396,12 @@ fun:
         invalidType: 'Invalid meme type given, `{0}` is not a valid meme type!'
         mustIncludeTopAndBottomText: 'You must include the `top text` and `bottom text` arguments to generate a meme.'
         listItem: '`{0}` => `{1}`'
+
+    PunCommand:
+        title: "Pun list"
+        noResults: ":user I found no puns, you can with a search or, or just try again later."
+        noResultsWithQuery: ":user I found nothing for `:query`"
+        query: "Search query: {0}"
 
     RandomCatCommand:
         tooManyAttempts: "Too many attempts was made to the cat API, try again in a minute, or ask a bot administrator to get an API key at [meow.senither.com](https://meow.senither.com/) to allow for more requests."

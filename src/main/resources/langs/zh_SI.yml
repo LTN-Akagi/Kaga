@@ -8,7 +8,7 @@ errors:
     missingMusicQueue: '丢失的音乐`query`,您必须包含一个指向您要听的歌曲的链接，或者至少给我一个歌曲标题!'
     cantMentionEveryone: "您没有权限提及所有人."
     requireLevelFeatureToBeEnabled: '此命令要求为服务器启用 `级别和体验` 您可以询问服务器管理员是否要使用 `{0}`'
-    errorOccurredWhileLoading: '加载时出错 {0}, 请再试一次. 如果问题继续存在, 请将此情况报告给[Avaire支持服务器]上的一个开发人员。(https://discord.gg/gt2FWER). 如果你不懂如何操作，请联系我QQ1653573879来帮助操作'
+    errorOccurredWhileLoading: '加载时出错 {0}, 请再试一次. 如果问题继续存在, 请将此情况报告给[Avaire支持服务器]上的一个开发人员。(https://avairebot.com/support). 如果你不懂如何操作，请联系我QQ1653573879来帮助操作'
 
 levelupMessages:
     - "GG :user, 你成功的升为 **Level :level**"
@@ -54,7 +54,7 @@ administration:
         cantUseForBots: "您不能为bot帐户添加、删除或重置XP，因为这些帐户不能赚取任何利润，请在使用此命令时选择一个普通用户."
         invalidAmountGiven: "这个 `amount` 属性必须介于 1 和 {0} 添加或接受用户的经验."
         aboutToResetEverything: "You're about to reset the XP for everyone on the entire server, note that this action **CAN NOT** be reversed. If you're sure you wanna continue, run the command to completely reset the servers XP.\n\n```:command server-reset :token```\nThis command will only work for 60 seconds, after that time the token becomes invalid and the command has to be ran again to get a new token."
-        failedToSaveChanges: "无法将更改保存到数据库，请重试，如果错误继续发生，请与官方[AvaIre支持服务器]上的支持人员联系(https://discord.gg/gt2FWER). 如果你不懂如何操作，请联系我QQ1653573879来帮助操作"
+        failedToSaveChanges: "无法将更改保存到数据库，请重试，如果错误继续发生，请与官方[AvaIre支持服务器]上的支持人员联系(https://avairebot.com/support). 如果你不懂如何操作，请联系我QQ1653573879来帮助操作"
         mustBeAnAdmin: "You must be a server admin to reset everyones XP."
         invalidSecurityToken: "Invalid security token given, please provide the correct security token to reset all the servers XP."
         warning: "Warning!"
@@ -278,6 +278,13 @@ administration:
     RemoveSelfAssignableRoleCommand:
         message: "这个 **:role** 角色已从自我分配列表中删除。.\n服务器具有 `:slots` 更多可自我分配的角色插槽可用."
 
+    SetRoleColorCommand:
+        noRoleFound: "No role with the name \"{0}\" was found."
+        invalidColor: "The color \"{0}\" is not recognized, use the following HEX format instead \"#XXXXXX\""
+        userMissingPermissions: "You can't use the this command for the {0} role, you must have greater or equal privileges as the role to successfully run the command."
+        botMissingPermissions: "The Set Role Color command can't be used for the {0} role, I need to have greater or equal privileges as the role to successfully run the command."
+        colorChangeComplete: "The :role role has been successfully changed to **:color**."
+
     SlowmodeCommand:
         missingArgument: "参数丢失，则必须传入 `seconds` 值为此通道或所述通道启用慢速模式，或 `off` to disable it."
         mustBeValidNumbers: "给定的慢模值无效，则必须在 **1** and **120**."
@@ -387,6 +394,12 @@ fun:
         invalidType: '给出的模因类型无效, `{0}` 不是有效的meme类型。!'
         mustIncludeTopAndBottomText: '您必须包括 `top text` 和 `bottom text` 生成模因的参数.'
         listItem: '`{0}` => `{1}`'
+
+    PunCommand:
+        title: "Pun list"
+        noResults: ":user I found no puns, you can with a search or, or just try again later."
+        noResultsWithQuery: ":user I found nothing for `:query`"
+        query: "Search query: {0}"
 
     RandomCatCommand:
         tooManyAttempts: "对cat api进行了太多的尝试，一分钟后再试一次，或者要求bot管理员在以下位置获取api密钥： [meow.senither.com](https://meow.senither.com/) 允许更多的请求."

@@ -9,7 +9,7 @@ errors:
     missingMusicQueue: 'No se ha encontrado cola de música. ¡Debes poner un enlace a una canción o decir al menos un título!'
     cantMentionEveryone: "You don't have permissions to mention everyone."
     requireLevelFeatureToBeEnabled: 'Este comando necesita la característica "Niveles y experiencia" activada en el servidor, puedes pedirle al administrador del servidor que la active con "{0}"'
-    errorOccurredWhileLoading: 'Se ha producido un error al cargar: {0}. Vuelve a intentarlo y si el problema continúa informa de ello a alguno de mis desarrolladores en el [servidor de atención AvaIre] (https://discord.gg/gt2FWER).'
+    errorOccurredWhileLoading: 'Se ha producido un error al cargar: {0}. Vuelve a intentarlo y si el problema continúa informa de ello a alguno de mis desarrolladores en el [servidor de atención AvaIre] (https://avairebot.com/support).'
 
 levelupMessages:
     - "GG, :user, ha alcanzado el **nivel :level**"
@@ -56,7 +56,7 @@ administration:
         cantUseForBots: "You can't add, remove, or reset XP for bot accounts since they don't earn any, please select a normal user when using this command."
         invalidAmountGiven: "The `amount` property must be between 1 and {0} to add or take XP from a user."
         aboutToResetEverything: "You're about to reset the XP for everyone on the entire server, note that this action **CAN NOT** be reversed. If you're sure you wanna continue, run the command to completely reset the servers XP.\n\n```:command server-reset :token```\nThis command will only work for 60 seconds, after that time the token becomes invalid and the command has to be ran again to get a new token."
-        failedToSaveChanges: "Failed to save the changes to the database, please try again, if the error continues to happen, please contact support on the official [AvaIre support server](https://discord.gg/gt2FWER)."
+        failedToSaveChanges: "Failed to save the changes to the database, please try again, if the error continues to happen, please contact support on the official [AvaIre support server](https://avairebot.com/support)."
         mustBeAnAdmin: "You must be a server admin to reset everyones XP."
         invalidSecurityToken: "Invalid security token given, please provide the correct security token to reset all the servers XP."
         warning: "Warning!"
@@ -280,6 +280,13 @@ administration:
     RemoveSelfAssignableRoleCommand:
         message: "Role **:role** role has been removed from the self-assignable list.\nThe server has `:slots` more self-assignable roles slots available."
 
+    SetRoleColorCommand:
+        noRoleFound: "No role with the name \"{0}\" was found."
+        invalidColor: "The color \"{0}\" is not recognized, use the following HEX format instead \"#XXXXXX\""
+        userMissingPermissions: "You can't use the this command for the {0} role, you must have greater or equal privileges as the role to successfully run the command."
+        botMissingPermissions: "The Set Role Color command can't be used for the {0} role, I need to have greater or equal privileges as the role to successfully run the command."
+        colorChangeComplete: "The :role role has been successfully changed to **:color**."
+
     SlowmodeCommand:
         missingArgument: "Missing argument, you must either pass in the `seconds` value to enable slowmode for this or the mentioned channel, or `off` to disable it."
         mustBeValidNumbers: "Invalid slowmode value given, you must provide a number between **1** and **120**."
@@ -390,11 +397,16 @@ fun:
         mustIncludeTopAndBottomText: 'Debes incluir los textos superior e inferior para generar un meme.'
         listItem: '"{0}" => "{1}"'
 
+    PunCommand:
+        title: "Pun list"
+        noResults: ":user I found no puns, you can with a search or, or just try again later."
+        noResultsWithQuery: ":user I found nothing for `:query`"
+        query: "Search query: {0}"
+
     RandomCatCommand:
         tooManyAttempts: "Too many attempts was made to the cat API, try again in a minute, or ask a bot administrator to get an API key at [meow.senither.com](https://meow.senither.com/) to allow for more requests."
         notFound: "I couldn't find any cat picture D: Try again, maybe they will show up now?"
         somethingWentWrong: "Something just went horribly wrong, please tell a bot administrator so they can look into this."
-
 
     ReverseCommand:
         palindrome: 'Le has dado la vuelta a un palíndromo, ¿qué esperabas?'
@@ -650,6 +662,7 @@ music:
         alreadyVoted: '¡Solo puedes votar omitir una vez por canción! Con `:votes` más se omitirá la canción.'
 
 search:
+
     DuckDuckGoCommand:
         nsfwDisabled: "The `Duck Duck GO` command can only be used in NSFW channels, as the search results may return NSFW content."
         searchResults: 'Resultado de búsqueda: {0}'

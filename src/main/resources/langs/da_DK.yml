@@ -9,7 +9,7 @@ errors:
     missingMusicQueue: 'Mangler musik `forespørgsel`, skal du inkludere et link til sangen, du vil lytte til, eller i det mindste give mig en sangtitel!'
     cantMentionEveryone: "Du har ikke tilladelser til at nævne alle."
     requireLevelFeatureToBeEnabled: "Denne kommando kræver, at `Level og Experience' funktionen er aktiveret for serveren, du kan spørge en serveradministrator, hvis de vil aktivere den med `{0}`"
-    errorOccurredWhileLoading: "Der opstod en fejl under indlæsningen af {0}. Prøv venligst igen. Hvis problemet fortsætter kan du rapportere dette til et af mine udviklere på [AvaIre support serveren](https://discord.gg/gt2FWER)."
+    errorOccurredWhileLoading: "Der opstod en fejl under indlæsningen af {0}. Prøv venligst igen. Hvis problemet fortsætter kan du rapportere dette til et af mine udviklere på [AvaIre support serveren](https://avairebot.com/support)."
 
 levelupMessages:
     - "GG :user, du har lige nået **Level :level**"
@@ -52,11 +52,10 @@ administration:
         success: "**:role** rollen er blevet tilføjet til selvtilladelige listen.\nServeren har `:slots` flere selvtilladelige roller pladser til rådighed."
 
     AdministrateExperienceCommand:
-    AdministrateExperienceCommand:
         cantUseForBots: "Du kan ikke tilføje, fjerne, eller nulstille XP for en bot-konti, da de ikke kan få noget XP til at starte med. Vælg venligst en normal bruger, når du bruger denne kommando."
         invalidAmountGiven: "Egenskaben `amount` skal være mellem 1 og {0} for at tilføje eller tage XP fra en bruger."
         aboutToResetEverything: "Du er ved at nulstille XP for alle på hele serveren. Bemærk, at denne handling **KAN IKKE** laves om. Hvis du er sikker på, at du vil fortsætte, skal du køre kommandoen for at nulstille serverne XP helt.\n\n```:command server-reset :token```\nDenne kommando fungerer kun i 60 sekunder, efter den tid token bliver ugyldig og kommandoen skal køres igen for at få et nyt token."
-        failedToSaveChanges: "Kunne ikke gemme ændringerne i databasen. Prøv igen, hvis fejlen fortsætter med at ske, bedes du kontakte support på den officielle [AvaIre support server](https://discord.gg/gt2FWER)."
+        failedToSaveChanges: "Kunne ikke gemme ændringerne i databasen. Prøv igen, hvis fejlen fortsætter med at ske, bedes du kontakte support på den officielle [AvaIre support server](https://avairebot.com/support)."
         mustBeAnAdmin: "Du skal være en serveradministrator for at nulstille alles XP."
         invalidSecurityToken: "Ugyldigt sikkerheds token givet, angiv venligst det korrekte sikkerheds token for at nulstille alle XP for all på serveren."
         warning: "Advarsel!"
@@ -280,6 +279,13 @@ administration:
     RemoveSelfAssignableRoleCommand:
         message: "**:role** rollen er blevet fjernet fra selvtilladelige listen.\nServeren har `:slots` flere selvtilladelige roller pladser til rådighed."
 
+    SetRoleColorCommand:
+        noRoleFound: "No role with the name \"{0}\" was found."
+        invalidColor: "The color \"{0}\" is not recognized, use the following HEX format instead \"#XXXXXX\""
+        userMissingPermissions: "You can't use the this command for the {0} role, you must have greater or equal privileges as the role to successfully run the command."
+        botMissingPermissions: "The Set Role Color command can't be used for the {0} role, I need to have greater or equal privileges as the role to successfully run the command."
+        colorChangeComplete: "The :role role has been successfully changed to **:color**."
+
     SlowmodeCommand:
         missingArgument: "Manglende argument, du skal enten passere en `sekunder'-værdien for at aktivere slowmode for denne eller den nævnte kanal, eller `off` for at deaktivere slowmode."
         mustBeValidNumbers: "Ugyldig slowmode værdi angivet, du skal angive et tal imellem **1** og **120**."
@@ -389,6 +395,12 @@ fun:
         invalidType: 'Ugyldig meme type givet, `{0}` er ikke en gyldig meme type!'
         mustIncludeTopAndBottomText: 'Du skal inkludere "top tekst" og "nederste tekst" argumenterne for at generere en meme.'
         listItem: '`{0}` => `{1}`'
+
+    PunCommand:
+        title: "Pun list"
+        noResults: ":user I found no puns, you can with a search or, or just try again later."
+        noResultsWithQuery: ":user I found nothing for `:query`"
+        query: "Search query: {0}"
 
     RandomCatCommand:
         tooManyAttempts: "Der blevet for mange forsøg på kat-API'et, prøv igen om et minut eller spørg en botadministrator om at få en API-nøgle på [meow.senither.com](https://meow.senither.com/) for at tillade flere commands per minut."

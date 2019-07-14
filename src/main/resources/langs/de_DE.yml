@@ -9,7 +9,7 @@ errors:
     missingMusicQueue: 'Fehlende Music `query`. Du musst einen Link zu einem Song angeben, den du dir anhören möchtest. Du kannst mir auch gern den Musiktitel geben.'
     cantMentionEveryone: "You don't have permissions to mention everyone."
     requireLevelFeatureToBeEnabled: 'Dieser Befehl benötigt das `Levels & Experience` Feature. Du kannst den Server-Administrator anfragen, ob dieser damit einverstanden ist diesen mit folgendem Befehl zu aktivieren: `{0}`'
-    errorOccurredWhileLoading: 'Ein Fehler ist beim Laden von {0} aufgetreten. Bitte versuche es später erneut. Sollte dieser Fehler erneut auftreten, so kontaktiere eines unserer Entwickler auf dem [AvaIre Support Server] [https://discord.gg/gt2FWER].'
+    errorOccurredWhileLoading: 'Ein Fehler ist beim Laden von {0} aufgetreten. Bitte versuche es später erneut. Sollte dieser Fehler erneut auftreten, so kontaktiere eines unserer Entwickler auf dem [AvaIre Support Server] [https://avairebot.com/support].'
 
 levelupMessages:
     - "GG :user, du hast soeben **Level :level** erreicht!"
@@ -52,11 +52,10 @@ administration:
         success: "Die Rolle **:role** wurde zu der Liste der selbst setzbaren Rollen hinzugefügt.\n Der Server hat `:slots` weitere Rollenslots für Rollen, die du dir selbst setzen kannst."
 
     AdministrateExperienceCommand:
-    AdministrateExperienceCommand:
         cantUseForBots: "You can't add, remove, or reset XP for bot accounts since they don't earn any, please select a normal user when using this command."
         invalidAmountGiven: "The `amount` property must be between 1 and {0} to add or take XP from a user."
         aboutToResetEverything: "You're about to reset the XP for everyone on the entire server, note that this action **CAN NOT** be reversed. If you're sure you wanna continue, run the command to completely reset the servers XP.\n\n```:command server-reset :token```\nThis command will only work for 60 seconds, after that time the token becomes invalid and the command has to be ran again to get a new token."
-        failedToSaveChanges: "Failed to save the changes to the database, please try again, if the error continues to happen, please contact support on the official [AvaIre support server](https://discord.gg/gt2FWER)."
+        failedToSaveChanges: "Failed to save the changes to the database, please try again, if the error continues to happen, please contact support on the official [AvaIre support server](https://avairebot.com/support)."
         mustBeAnAdmin: "You must be a server admin to reset everyones XP."
         invalidSecurityToken: "Invalid security token given, please provide the correct security token to reset all the servers XP."
         warning: "Warning!"
@@ -280,6 +279,13 @@ administration:
     RemoveSelfAssignableRoleCommand:
         message: "Die **:role** Rolle wurde erfolgreich aus der Liste der selbst-zuweisbaren Rollen enfernt.\nDer Server hat noch `:slots` weitere selbst-zuweisbare Rollenslots verfügbar."
 
+    SetRoleColorCommand:
+        noRoleFound: "No role with the name \"{0}\" was found."
+        invalidColor: "The color \"{0}\" is not recognized, use the following HEX format instead \"#XXXXXX\""
+        userMissingPermissions: "You can't use the this command for the {0} role, you must have greater or equal privileges as the role to successfully run the command."
+        botMissingPermissions: "The Set Role Color command can't be used for the {0} role, I need to have greater or equal privileges as the role to successfully run the command."
+        colorChangeComplete: "The :role role has been successfully changed to **:color**."
+
     SlowmodeCommand:
         missingArgument: "Fehlendes Argument. Du musst den Wert in `Sekunden` angegeben. Um diesen zu entfernen, so schreibe `off` hinter dem Befehl."
         mustBeValidNumbers: "Ungültiger Slowmode-Wert angegeben. Du musst eine Zahl zwischen **1** und **120** angeben."
@@ -390,11 +396,16 @@ fun:
         mustIncludeTopAndBottomText: 'Du musst den `top text` und `bottom text` Argument angeben, um ein Meme generieren zu können.'
         listItem: '`{0}` => `{1}`'
 
+    PunCommand:
+        title: "Pun list"
+        noResults: ":user I found no puns, you can with a search or, or just try again later."
+        noResultsWithQuery: ":user I found nothing for `:query`"
+        query: "Search query: {0}"
+
     RandomCatCommand:
         tooManyAttempts: "Zu viele Versuche wurden zur Cat API getätigt. Warte eine Minute und versuche es erneut. Andernfalls, kontaktiere einen Bot-Administrator um die API [meow.senither.com](https://meow.senither.com/) zu erhalten, um mehr Anfragen zu ermöglichen."
         notFound: "Ich konnte kein Katzenbild finden! Versuch es doch erneut. Vielleicht siehst du jetzt eins."
         somethingWentWrong: "Etwas Unartiges ist passiert. Kontakiere einen Bot-Administrator, der sich das anschauen kann."
-
 
     ReverseCommand:
         palindrome: 'Du hast ein Palindrom umgekehrt, was hast du erwartet?'

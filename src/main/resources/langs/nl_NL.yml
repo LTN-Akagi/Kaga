@@ -9,7 +9,7 @@ errors:
     missingMusicQueue: 'Er mist een muziek `query`, je moet een link naar het nummer die je wilt luisteren leveren of tenminste een titel van een nummer!'
     cantMentionEveryone: "Je hebt geen toestemming om iedereen te pingen."
     requireLevelFeatureToBeEnabled: 'Om dit commando te kunnen gebruiken, moet je de `Levels en Experience` module aan hebben op de server, je kan een server admin vragen als ze dit aan willen zetten met `{0}`'
-    errorOccurredWhileLoading: 'Er is een error voorgekomen onder het laden van {0}, A.U.B opnieuw proberen, als dit probleem niet weg gaat, laat het weten bij een van de developers in de [AvaIre support server](https://discord.gg/gt2FWER).'
+    errorOccurredWhileLoading: 'Er is een error voorgekomen onder het laden van {0}, A.U.B opnieuw proberen, als dit probleem niet weg gaat, laat het weten bij een van de developers in de [AvaIre support server](https://avairebot.com/support).'
 
 levelupMessages:
     - "GG :user, je hebt **Level :level** berijkt"
@@ -55,7 +55,7 @@ administration:
         cantUseForBots: "Je kan geen exp toevoegen, aanpassen of verwijderen voor bot accounts, aangezien deze geen exp krijgen. Noem A.U.B een gewone gebruiker wanneer je dit commando gebruikt."
         invalidAmountGiven: "De `amount` waarde moet tussen de 0 en de {0} zijn om exp van een user af te pakken of om exp toe te voegen."
         aboutToResetEverything: "Je staat op het punt om alle EXP van iedereen op de server te resetten, **LET OP** dit kan **NIET** ongedaan worden. Als je zeker weet dat je wilt doorgaan, run het commando om alle exp van alle gebruikers te resetten.\n\n```:command server-reset :token```\nDit commando werkt alleen voor 60 seconden, na deze tijd wordt het token ongeldig en zal het commando opnieuw gebruikt moeten worden voor een nieuw token."
-        failedToSaveChanges: "Gefaald met het opslaan van de veranderingen naar de database, probeer A.U.B opnieuw, als deze error blijft gebeuren, neem dan contact op met support in de officiele [AvaIre support server](https://discord.gg/gt2FWER)."
+        failedToSaveChanges: "Gefaald met het opslaan van de veranderingen naar de database, probeer A.U.B opnieuw, als deze error blijft gebeuren, neem dan contact op met support in de officiele [AvaIre support server](https://avairebot.com/support)."
         mustBeAnAdmin: "Je moet een server admin zijn om iedereens EXP te resetten."
         invalidSecurityToken: "Ongeldig security token gegeven, geef A.U.B een geldig security token om de EXP van alle servers te resetten."
         warning: "Waarschuwing!"
@@ -279,6 +279,13 @@ administration:
     RemoveSelfAssignableRoleCommand:
         message: "De **:role** rol is verwijderd van de zelf toegeven lijst.\nDe server heeft nog `:slots` plekken voor zelf toe te geven rollen."
 
+    SetRoleColorCommand:
+        noRoleFound: "No role with the name \"{0}\" was found."
+        invalidColor: "The color \"{0}\" is not recognized, use the following HEX format instead \"#XXXXXX\""
+        userMissingPermissions: "You can't use the this command for the {0} role, you must have greater or equal privileges as the role to successfully run the command."
+        botMissingPermissions: "The Set Role Color command can't be used for the {0} role, I need to have greater or equal privileges as the role to successfully run the command."
+        colorChangeComplete: "The :role role has been successfully changed to **:color**."
+
     SlowmodeCommand:
         missingArgument: "Er mist een argument, je moet of de `seconds` waarde geven voor dit of het genoemde kanaal, of `off` om het uit te schakelen."
         mustBeValidNumbers: "Ongeldige slowmode waarde gegeven, je moet een nummer tussen de **1** en **120** geven."
@@ -306,9 +313,9 @@ administration:
         invalidUserIdGiven: "Ongeldige `user id` is gegeven, de `user id` moet een nummer van 18 karakters of langer zijn."
 
     VoiceKickCommand:
-        mustMentionUser: Je moet een gebruiker noemen die je wil kicken."
+        mustMentionUser: "Je moet een gebruiker noemen die je wil kicken."
         sameOrHigherRole: "Je kan geen mensen kicken met een hogere, of dezelfde rol als jezelf."
-        notConnected: Je kan iemand niet uit een spraak kanaal kicken als ze niet verbonden zijn met een spraak kanaal."
+        notConnected: "Je kan iemand niet uit een spraak kanaal kicken als ze niet verbonden zijn met een spraak kanaal."
         message: "**:target** is gekicked van **:voiceChannel** door :user voor \":reason\""
 
     VoteOptCommand:
@@ -388,6 +395,12 @@ fun:
         invalidType: 'Ongeldig meme type gegeven, `{0}` is geen geldig meme type!'
         mustIncludeTopAndBottomText: 'Je moet de `top text` en `bottom text` arguments toevoegen om een meme te genereren.'
         listItem: '`{0}` => `{1}`'
+
+    PunCommand:
+        title: "Pun list"
+        noResults: ":user I found no puns, you can with a search or, or just try again later."
+        noResultsWithQuery: ":user I found nothing for `:query`"
+        query: "Search query: {0}"
 
     RandomCatCommand:
         tooManyAttempts: "Teveel aanvragen naar de Cat API, probeer opnieuw in een minuut, of vraag een bot administrator voor een api key op [meow.senither.com](https://meow.senither.com/) om meer aanvragen toe te staan."
@@ -648,6 +661,7 @@ music:
         alreadyVoted: 'Je mag maar een keer stemmen om een nummer over te slaan per nummer! nog maar `:votes` stemmen nodig om het nummer over te slaan.'
 
 search:
+
     DuckDuckGoCommand:
         nsfwDisabled: "Het `Duck Duck GO` commando kan alleen gebruikt worden in NSFW kanalen, omdat de resultaten NSFW beelden kan bevatten."
         searchResults: 'Zoek resultaat voor: {0}'

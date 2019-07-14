@@ -52,6 +52,6 @@ public class PatCommand extends InteractionCommand {
 
     @Override
     public List<String> getTriggers() {
-        return Arrays.asList("pat", "pats", "headpats");
+        return Arrays.asList("pat", "pats", "headpat", "headpats");
     }
 }
