@@ -4,7 +4,7 @@ before_install:
     - chmod +x gradlew
 
 jdk:
-    - oraclejdk8
+    - oraclejdk11
 
 after_success:
     - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
