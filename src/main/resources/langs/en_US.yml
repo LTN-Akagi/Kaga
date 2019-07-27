@@ -17,7 +17,7 @@ levelupMessages:
     - "How dare you wake me up :user! Here Take this **Level :level** And don't bother me again."
     - "GOOD JOB :user,YOU LEVELED UP! To **Level :level** NOW Don't bother me again."
     - "Congratulations I Give Zero Fucks on your level :user But Since I'm Forced to. Here you go **Level :level**"
-    - "Oh Great your at level :level. Guess I'll update my database due to you :user"
+    - "Oh Great your at **level :level**. Guess I'll update my database due to you :user."
 
 levelupRoleMessages:
     - "GG :user, you just reached **Level :level**, you now have the **:role** role"
