@@ -480,7 +480,7 @@ vote-lock:
   # can be used to handle vote request sent by DBL, making it easy and
   # automatic to reward users when they vote.
   #
-  enabled: false
+  enabled: true
 
   # This option determines where the vote check requests generated using the "!vote check"
   # command should be sent, if this option is set to false all requests will use the
@@ -488,7 +488,7 @@ vote-lock:
   # however if the option is set to true, the "vote-sync-token" will not be
   # used, and requests will instead be redirected to Avas public API to
   # try and sync votes made for the public bot.
-  sync-with-public-bot: false
+  sync-with-public-bot: true
 
   # This is the bot application API token for DBL(Discord Bot List), the API token
   # is used to sync votes between the API and the bot during startup, so anyone
