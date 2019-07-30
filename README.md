@@ -20,6 +20,7 @@
         <img src="https://img.shields.io/github/license/avaire/avaire.svg" alt="GitHub" >
     </a>
 </p>
+
 ## Known Bugs about Kaga
 
 - Music could be a little laggy until Lavalink gets setup on a remote server.
