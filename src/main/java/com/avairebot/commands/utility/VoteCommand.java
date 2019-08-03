@@ -138,7 +138,7 @@ public class VoteCommand extends Command {
         }
 
         context.makeInfo(
-            ":user, You've been put on a queue to get your vote rewards. Make sure you've voted or nothing will happen!"
+            " :user, You've been put on a queue to get your vote rewards. Make sure you've voted or nothing will happen!"
         ).queue();
 
         return true;

@@ -59,7 +59,7 @@ public class VoteMessenger {
             .setFooter("Don't want to receive messages when you vote? use \"!voteopt out\"", null)
             .setDescription(String.format(
                 "Thanks for voting for [AvaIre](https://discordbots.org/bot/avaire)! It's really appreciated ❤"
-                    + "\nYou now have **%s** vote points, rewards for vote points is coming soon! <a:lurk:425394751357845506>"
+                    + "\nYou now have **%s** vote points, rewards for vote points is coming soon! <a:lurk:4253947513578455061>"
                     + "\nYou now also have access to the `!volume` and `!default-volume` commands for the next 12 hours on servers you have permission to run them on, you can also save up your vote points to buy special rank backgrounds using the `!backgrounds` command.", points))
             .build();
     }
