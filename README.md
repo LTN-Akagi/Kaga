@@ -2,7 +2,7 @@
     <img src="https://cdn.avairebot.com/image/simple-banner.png">
 </p>
 
-## Avaire's Stats NOT KAGA'S
+## Avaire's Stats
 <p align="center">
     <a href="https://discordbots.org/bot/275270122082533378">
         <img src="https://discordbots.org/api/widget/servers/275270122082533378.svg?noavatar=true" alt="AvaIre">
@@ -21,9 +21,7 @@
     </a>
 </p>
 
-[![Build Status](https://travis-ci.org/LTN-Akagi/Kaga.svg?branch=master)](https://travis-ci.org/LTN-Akagi/Kaga)
-
-## Known Bugs
+## Known Bugs about Kaga
 
 - Music could be a little laggy until Lavalink gets setup on a remote server.
    - If you do plan on using the music commands then expect some lag as she's not on a good connection.
