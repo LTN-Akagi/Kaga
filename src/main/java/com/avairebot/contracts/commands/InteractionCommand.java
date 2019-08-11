@@ -141,7 +141,7 @@ public abstract class InteractionCommand extends Command {
         User user = context.getAuthor();
         User target = MentionableUtil.getUser(context, args, 0);
         if (target == null) {
-            return sendErrorMessage(context, "You must mention a use you want to use the interaction for.");
+            return sendErrorMessage(context, "You must mention a user you want to use the interaction for.");
         }
 
         User secondaryTarget = MentionableUtil.getUser(context, args, 1);
