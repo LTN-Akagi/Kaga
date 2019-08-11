@@ -57,6 +57,8 @@ Before deploying, read [the configuration guide](https://github.com/avaire/avair
 
 Thank you for considering contributing to AvaIre! The contribution guide can be found in the [AvaIre documentation](https://github.com/avaire/avaire/wiki/contribution-guide).
 
+Vote for [Avaire](https://discordbots.org/bot/avaire) and get Points for both Kaga and Avaire
+
 ## License
 
 AvaIre is open-sourced software licensed under the [GNU General Public License v3.0](http://www.gnu.org/licenses/gpl.html).
