@@ -34,7 +34,7 @@ public class TrackRequestContext {
     private final String query;
     private SearchProvider provider;
 
-    public TrackRequestContext(String query, SearchProvider provider) {
+    public TrackRequestContext(@Nonnull String query, @Nonnull SearchProvider provider) {
         this.query = query;
         this.provider = provider;
     }
@@ -53,6 +53,9 @@ public class TrackRequestContext {
     }
 
     public String getFormattedQuery() {
+        if (!provider.isSearchable()) {
+            return query;
+        }
         return punctuationRegex.matcher(query).replaceAll("");
     }
 
@@ -62,6 +65,10 @@ public class TrackRequestContext {
 
     public SearchProvider getProvider() {
         return provider;
+    }
+
+    public void setProvider(@Nonnull SearchProvider provider) {
+        this.provider = provider;
     }
 
     @Override
