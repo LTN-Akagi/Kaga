@@ -23,7 +23,9 @@ package com.avairebot.plugin;
 
 import com.avairebot.AppInfo;
 import com.avairebot.AvaIre;
+import com.avairebot.commands.CommandHandler;
 import com.avairebot.config.YamlConfiguration;
+import com.avairebot.contracts.commands.Command;
 import com.avairebot.exceptions.InvalidPluginException;
 import com.avairebot.utilities.NumberUtil;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
@@ -139,6 +141,22 @@ public class PluginLoader {
     }
 
     /**
+     * Unregisters the plugin, this will systematically shutdown the plugin by
+     * calling the {@link JavaPlugin#onDisable() onDisable()} method, and
+     * unregister all events and commands associated with the plugin.
+     *
+     * @param avaire The AvaIre class instance.
+     */
+    public void unregisterPlugin(AvaIre avaire) {
+        classLoader.getPlugin().onDisable();
+        classLoader.getPlugin().getEventListeners().clear();
+
+        for (Class<? extends Command> commandClass : classLoader.getPlugin().getCommands()) {
+            CommandHandler.unregister(commandClass);
+        }
+    }
+
+    /**
      * Gets a set of the event listeners that has been registered by the plugin.
      *
      * @return A set of registered event listeners.
@@ -188,8 +206,9 @@ public class PluginLoader {
     }
 
     /**
+     * Gets the plugin class loader instance used for loading the plugin.
      *
-     * @return
+     * @return Plugin class loader instance
      */
     public PluginClassLoader getClassLoader() {
         return classLoader;
