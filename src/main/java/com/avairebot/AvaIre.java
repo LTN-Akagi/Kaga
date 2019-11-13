@@ -42,10 +42,7 @@ import com.avairebot.commands.administration.ChangePrefixCommand;
 import com.avairebot.commands.utility.SourceCommand;
 import com.avairebot.commands.utility.StatsCommand;
 import com.avairebot.commands.utility.UptimeCommand;
-import com.avairebot.config.Configuration;
-import com.avairebot.config.ConstantsConfiguration;
-import com.avairebot.config.EnvironmentMacros;
-import com.avairebot.config.EnvironmentOverride;
+import com.avairebot.config.*;
 import com.avairebot.contracts.commands.Command;
 import com.avairebot.contracts.database.migrations.Migration;
 import com.avairebot.contracts.database.seeder.Seeder;
@@ -60,6 +57,7 @@ import com.avairebot.handlers.EventEmitter;
 import com.avairebot.handlers.GenericEventHandler;
 import com.avairebot.handlers.MainEventHandler;
 import com.avairebot.handlers.events.ApplicationShutdownEvent;
+import com.avairebot.imagegen.RankBackgroundHandler;
 import com.avairebot.language.I18n;
 import com.avairebot.level.LevelManager;
 import com.avairebot.metrics.Metrics;
@@ -274,6 +272,9 @@ public class AvaIre {
 
         log.info("Preparing I18n");
         I18n.start(this);
+
+        log.info("Creating rank backgrounds");
+        RankBackgroundHandler.getInstance().start();
 
         log.info("Creating plugin manager and registering plugins...");
         pluginManager = new PluginManager();
@@ -556,6 +557,8 @@ public class AvaIre {
         }
 
         intelligenceManager.unregisterService();
+
+        FeatureToggleContextHandler.saveToStorage();
 
         for (ScheduledFuture<?> scheduledFuture : ScheduleHandler.entrySet()) {
             scheduledFuture.cancel(false);
