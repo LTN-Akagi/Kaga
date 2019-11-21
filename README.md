@@ -2,13 +2,9 @@
     <img src="https://cdn.avairebot.com/image/simple-banner.png">
 </p>
 
-## Avaire's Stats
 <p align="center">
-    <a href="https://discordbots.org/bot/275270122082533378">
-        <img src="https://discordbots.org/api/widget/servers/275270122082533378.svg?noavatar=true" alt="AvaIre">
-    </a>
-    <a href="https://discordbots.org/bot/275270122082533378">
-        <img src="https://discordbots.org/api/widget/upvotes/275270122082533378.svg?noavatar=true" alt="AvaIre">
+    <a href="https://ci.avairebot.com/">
+        <img alt="TeamCity Simple Build Status" src="https://img.shields.io/teamcity/build/s/Avaire_Build?server=http%3A%2F%2Fci.avairebot.com%2F">
     </a>
     <a href="https://avairebot.com/">
         <img src="https://cdn.avairebot.com/badge/avaire-version.svg" alt="AvaIre Version">
@@ -24,14 +20,18 @@
     </a>
 </p>
 
-## Known Bugs about Kaga
+<p align="center">
+    <a href="https://discordbots.org/bot/275270122082533378">
+        <img src="https://discordbots.org/api/widget/servers/275270122082533378.svg?noavatar=true" alt="AvaIre">
+    </a>
+    <a href="https://discordbots.org/bot/275270122082533378">
+        <img src="https://discordbots.org/api/widget/upvotes/275270122082533378.svg?noavatar=true" alt="AvaIre">
+    </a>
+</p>
 
-- Music could be a little laggy until Lavalink gets setup on a remote server.
-   - If you do plan on using the music commands then expect some lag as she's not on a good connection.
+## About AvaIre
 
-## About Kaga
-
-Kaga is a multipurpose Discord bot made for fun, written in Java 8, using the [JDA](https://github.com/DV8FromTheWorld/JDA) library.
+AvaIre is a multipurpose Discord bot made for fun, written in Java 8, using the [JDA](https://github.com/DV8FromTheWorld/JDA) library.
 
 ## Main features
 
@@ -49,7 +49,7 @@ Kaga is a multipurpose Discord bot made for fun, written in Java 8, using the [J
 
 Visit our [website](https://avairebot.com/) for more information.
 
-## Deploy Kaga on Heroku 
+## Deploy AvaIre on Heroku
 You can deploy in a simple way to Heroku using the button below.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
